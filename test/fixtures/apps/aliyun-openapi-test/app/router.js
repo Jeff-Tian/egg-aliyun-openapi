@@ -4,8 +4,6 @@ module.exports = app => {
   const { router } = app;
 
   router.get("/", ctx => {
-    ctx.body = "hi, " + app.plugins.passportCiti.name;
+    ctx.body = "hi, " + app.plugins.aliyunOpenApi.name;
   });
-
-  app.passport.mount("citi");
 };

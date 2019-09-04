@@ -1,0 +1,26 @@
+const mock = require("egg-mock");
+const request = require("supertest");
+describe("test/passport-citi.test.ts", () => {
+    let app;
+    before(async () => {
+        app = mock.app({
+            baseDir: "apps/aliyun-openapi-test"
+        });
+        return app.ready();
+    });
+    after(() => app.close());
+    afterEach(mock.restore);
+    it("should get /", () => {
+        return request(app.callback())
+            .get("/")
+            .expect("hi, aliyunOpenApi")
+            .expect(200);
+    });
+    it("should GET /vod play auth", async () => {
+        return app
+            .httpRequest()
+            .get("/vod")
+            .expect(200);
+    });
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWxpeXVuLW9wZW5hcGkudGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImFsaXl1bi1vcGVuYXBpLnRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxJQUFJLEdBQUcsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDO0FBQ2pDLE1BQU0sT0FBTyxHQUFHLE9BQU8sQ0FBQyxXQUFXLENBQUMsQ0FBQztBQUVyQyxRQUFRLENBQUMsNEJBQTRCLEVBQUUsR0FBRyxFQUFFO0lBQ3hDLElBQUksR0FBUSxDQUFDO0lBQ2IsTUFBTSxDQUFDLEtBQUssSUFBSSxFQUFFO1FBQ2QsR0FBRyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7WUFDWCxPQUFPLEVBQUUsMEJBQTBCO1NBQ3RDLENBQUMsQ0FBQztRQUVILE9BQU8sR0FBRyxDQUFDLEtBQUssRUFBRSxDQUFDO0lBQ3ZCLENBQUMsQ0FBQyxDQUFDO0lBRUgsS0FBSyxDQUFDLEdBQUcsRUFBRSxDQUFDLEdBQUcsQ0FBQyxLQUFLLEVBQUUsQ0FBQyxDQUFDO0lBRXpCLFNBQVMsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7SUFFeEIsRUFBRSxDQUFDLGNBQWMsRUFBRSxHQUFHLEVBQUU7UUFDcEIsT0FBTyxPQUFPLENBQUMsR0FBRyxDQUFDLFFBQVEsRUFBRSxDQUFDO2FBQ3pCLEdBQUcsQ0FBQyxHQUFHLENBQUM7YUFDUixNQUFNLENBQUMsbUJBQW1CLENBQUM7YUFDM0IsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQ3JCLENBQUMsQ0FBQyxDQUFDO0lBRUgsRUFBRSxDQUFDLDJCQUEyQixFQUFFLEtBQUssSUFBSSxFQUFFO1FBQ3ZDLE9BQU8sR0FBRzthQUNMLFdBQVcsRUFBRTthQUNiLEdBQUcsQ0FBQyxNQUFNLENBQUM7YUFDWCxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUE7SUFDcEIsQ0FBQyxDQUFDLENBQUM7QUFDUCxDQUFDLENBQUMsQ0FBQyJ9

@@ -1,8 +1,11 @@
 "use strict";
 
-exports.passportCiti = {
+exports.aliyunOpenApi = {
   key: "",
   secret: "",
-  callbackURL: "/passport/citi/callback",
-  countryCode: "sg"
+  regionId: 'cn-shanghai',
+  apiVersion: '2017-03-21',
+  mount: {
+    vod: '/vod'
+  }
 };

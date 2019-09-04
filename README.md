@@ -1,22 +1,22 @@
-# egg-passport-cit
+# egg-aliyun-openai
 
-> Citi passport plugin for egg.
+> eggjs plugin for invoke aliyun openapi, wrapper of [OpenAPI POP core SDK for Node.js](https://github.com/aliyun/openapi-core-nodejs-sdk)
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status](https://travis-ci.com/Jeff-Tian/egg-passport-citi.svg?branch=master)](https://travis-ci.com/Jeff-Tian/egg-passport-citi)
-[![codecov](https://codecov.io/gh/Jeff-Tian/egg-passport-citi/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeff-Tian/egg-passport-citi)
+[![Build Status](https://travis-ci.com/Jeff-Tian/egg-aliyun-openapi.svg?branch=master)](https://travis-ci.com/Jeff-Tian/egg-aliyun-openapi)
+[![codecov](https://codecov.io/gh/Jeff-Tian/egg-aliyun-openapi/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeff-Tian/egg-aliyun-openapi)
 [![David deps][david-image]][david-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
-[npm-image]: https://img.shields.io/npm/v/egg-passport-citi.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-passport-citi
-[david-image]: https://img.shields.io/david/jeff-tian/egg-passport-citi.svg?style=flat-square
-[david-url]: https://david-dm.org/jeff-tian/egg-passport-citi
-[snyk-image]: https://snyk.io/test/npm/egg-passport-citi/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-passport-citi
-[download-image]: https://img.shields.io/npm/dm/egg-passport-citi.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-passport-citi
+[npm-image]: https://img.shields.io/npm/v/egg-aliyun-openapi.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-aliyun-openapi
+[david-image]: https://img.shields.io/david/jeff-tian/egg-aliyun-openapi.svg?style=flat-square
+[david-url]: https://david-dm.org/jeff-tian/egg-aliyun-openapi
+[snyk-image]: https://snyk.io/test/npm/egg-aliyun-openapi/badge.svg?style=flat-square
+[snyk-url]: https://snyk.io/test/npm/egg-aliyun-openapi
+[download-image]: https://img.shields.io/npm/dm/egg-aliyun-openapi.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-aliyun-openapi
 
 <!--
 Description here.
@@ -29,16 +29,16 @@ Open [https://uniheart.herokuapp.com/](https://uniheart.herokuapp.com/) to see t
 ## Install
 
 ```bash
-$ npm i egg-passport-citi --save
+$ npm i egg-aliyun-openapi --save
 ```
 
 ## Usage
 
 ```js
 // {app_root}/config/plugin.[t|j]s
-exports.passportCiti = {
+exports.aliyunOpenApi = {
   enable: true,
-  package: "egg-passport-wechat-ts"
+  package: "egg-aliyun-openapi"
 };
 ```
 
@@ -46,9 +46,11 @@ exports.passportCiti = {
 
 ```js
 // {app_root}/config/config.default.[t|j]s
-exports.passportCiti = {
-  key: "your oauth key",
-  secret: "your oauth secret"
+exports.aliyunOpenApi = {
+  key: "your access key id",
+  secret: "your secret access key",
+  regionId: 'cn-shanghai',
+  apiVersion: '2017-03-21'
 };
 ```
 

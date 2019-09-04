@@ -1,8 +1,11 @@
 "use strict";
-exports.passportCiti = {
+exports.aliyunOpenApi = {
     key: "",
     secret: "",
-    callbackURL: "/passport/citi/callback",
-    countryCode: "sg"
+    regionId: 'cn-shanghai',
+    apiVersion: '2017-03-21',
+    mount: {
+        vod: '/vod'
+    }
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlnLmRlZmF1bHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJjb25maWcuZGVmYXVsdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZLENBQUM7QUFFYixPQUFPLENBQUMsWUFBWSxHQUFHO0lBQ3JCLEdBQUcsRUFBRSxFQUFFO0lBQ1AsTUFBTSxFQUFFLEVBQUU7SUFDVixXQUFXLEVBQUUseUJBQXlCO0lBQ3RDLFdBQVcsRUFBRSxJQUFJO0NBQ2xCLENBQUMifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlnLmRlZmF1bHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJjb25maWcuZGVmYXVsdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZLENBQUM7QUFFYixPQUFPLENBQUMsYUFBYSxHQUFHO0lBQ3RCLEdBQUcsRUFBRSxFQUFFO0lBQ1AsTUFBTSxFQUFFLEVBQUU7SUFDVixRQUFRLEVBQUUsYUFBYTtJQUN2QixVQUFVLEVBQUUsWUFBWTtJQUN4QixLQUFLLEVBQUU7UUFDTCxHQUFHLEVBQUUsTUFBTTtLQUNaO0NBQ0YsQ0FBQyJ9
