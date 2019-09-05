@@ -84,4 +84,4 @@ npm run test-local
 
 ## Release Notes:
 
-- 1.0.0: proxy aliyun pod product 
+- 1.0.0: proxy aliyun vod product 
