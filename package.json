@@ -1,6 +1,6 @@
 {
   "name": "egg-aliyun-openapi",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "eggjs plugin for invoke aliyun openapi, wrapper of OpenAPI POP core SDK for Node.js",
   "eggPlugin": {
     "name": "aliyunOpenApi",
@@ -35,7 +35,8 @@
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "typescript": "3.6.2",
-    "webstorm-disable-index": "^1.2.0"
+    "webstorm-disable-index": "^1.2.0",
+    "semantic-release": "^15.13.24"
   },
   "egg": {
     "typescript": true
@@ -53,7 +54,8 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod",
     "clean": "ets clean",
-    "prepublish": "npm run test-local"
+    "prepublish": "npm run test-local",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "config",
