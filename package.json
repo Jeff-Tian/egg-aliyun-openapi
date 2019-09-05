@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.0",
+    "@types/supertest": "^2.0.8",
     "autod": "^3.0.0",
     "autod-egg": "^1.0.0",
     "coffee": "^5.2.1",
@@ -27,6 +28,8 @@
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.13.0",
     "egg-ts-helper": "^1.13.0",
+    "nock": "^11.3.1",
+    "supertest": "^4.0.2",
     "ts-node": "^8.2.0",
     "tsc": "^1.20150623.0",
     "tslib": "^1.9.3",
