@@ -7,7 +7,10 @@ module.exports = appInfo => {
 
     config.aliyunOpenApi = {
         key: "xxx",
-        secret: "yyy"
+        secret: "yyy",
+        mount: {
+            vod: '/vod'
+        }
     };
 
     return config;

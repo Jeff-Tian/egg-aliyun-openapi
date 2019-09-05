@@ -1,11 +1,11 @@
-"use strict";
+'use strict'
 
 exports.aliyunOpenApi = {
-  key: "",
-  secret: "",
+  key: '',
+  secret: '',
   regionId: 'cn-shanghai',
   apiVersion: '2017-03-21',
   mount: {
-    vod: '/vod'
-  }
-};
+    vod: '/aliyun-openapi/vod',
+  },
+}

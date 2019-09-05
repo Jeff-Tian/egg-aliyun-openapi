@@ -22,9 +22,8 @@
 Description here.
 -->
 
-## Example
-
-Open [https://uniheart.herokuapp.com/](https://uniheart.herokuapp.com/) to see the result.
+## Functionality
+- vod
 
 ## Install
 
@@ -34,6 +33,7 @@ $ npm i egg-aliyun-openapi --save
 
 ## Usage
 
+1. Enable it on plugin configuration:
 ```js
 // {app_root}/config/plugin.[t|j]s
 exports.aliyunOpenApi = {
@@ -42,23 +42,31 @@ exports.aliyunOpenApi = {
 };
 ```
 
-## Configuration
-
+2. Configure the `access key`, `access secret`, and the `mount paths`:
 ```js
 // {app_root}/config/config.default.[t|j]s
 exports.aliyunOpenApi = {
   key: "your access key id",
   secret: "your secret access key",
   regionId: 'cn-shanghai',
-  apiVersion: '2017-03-21'
+  apiVersion: '2017-03-21',
+  mount: {
+    vod: '/aliyun-openapi/vod'
+  }
 };
 ```
 
 see [config/config.default.ts](config/config.default.ts) for more detail.
 
-## Example
+3. You can call it from client side now:
+```typescript
+const res = await app
+            .httpRequest()
+            .get('/aliyun-openapi/vod?action=GetVideoPlayAuth&videoId=1234')
+            .expect(200)
 
-<!-- example here -->
+assert.deepStrictEqual(res.body.PlayAuth, 'sstyYuew678999ew90000000xtt7TYUh')
+```
 
 ## Questions & Suggestions
 
@@ -75,3 +83,5 @@ npm run test-local
 ```
 
 ## Release Notes:
+
+- 1.0.0: proxy aliyun pod product 
