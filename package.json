@@ -4,7 +4,9 @@
   "description": "eggjs plugin for invoke aliyun openapi, wrapper of OpenAPI POP core SDK for Node.js",
   "eggPlugin": {
     "name": "aliyunOpenApi",
-    "dependencies": []
+    "dependencies": [
+      "routerPlus"
+    ]
   },
   "keywords": [
     "egg",
@@ -14,12 +16,15 @@
   ],
   "dependencies": {
     "@alicloud/pop-core": "^1.7.7",
-    "debug": "^2.6.1"
+    "debug": "^2.6.1",
+    "egg-router-plus": "^1.3.1",
+    "uuid": "latest"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.0",
     "@types/supertest": "^2.0.8",
+    "@types/uuid": "^3.4.5",
     "autod": "^3.0.0",
     "autod-egg": "^1.0.0",
     "coffee": "^5.2.1",
@@ -29,14 +34,14 @@
     "egg-mock": "^3.13.0",
     "egg-ts-helper": "^1.13.0",
     "nock": "^11.3.1",
+    "semantic-release": "^15.13.24",
     "supertest": "^4.0.2",
     "ts-node": "^8.2.0",
     "tsc": "^1.20150623.0",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "typescript": "3.6.2",
-    "webstorm-disable-index": "^1.2.0",
-    "semantic-release": "^15.13.24"
+    "webstorm-disable-index": "^1.2.0"
   },
   "egg": {
     "typescript": true

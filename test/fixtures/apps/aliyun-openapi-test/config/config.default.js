@@ -9,7 +9,8 @@ module.exports = appInfo => {
         key: "xxx",
         secret: "yyy",
         mount: {
-            vod: '/vod'
+            vod: '/vod',
+            green: '/green'
         }
     };
 
