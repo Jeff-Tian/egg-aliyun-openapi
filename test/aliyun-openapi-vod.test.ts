@@ -39,7 +39,7 @@ describe('test/aliyun-openapi.test.ts', () => {
 
         const res = await app
             .httpRequest()
-            .get('/vod?action=GetVideoPlayAuth&videoId=1234')
+            .get('/vod?action=GetVideoPlayAuth&videoId=3ed5e388346447e59ad0f0b5773afcca')
             .expect(200)
 
         assert.deepStrictEqual(res.body.PlayAuth, 'sstyYuew678999ew90000000xtt7TYUh')

@@ -6,11 +6,16 @@ module.exports = appInfo => {
     config.keys = "123456";
 
     config.aliyunOpenApi = {
-        key: "xxx",
-        secret: "yyy",
+        key: 'xxx',
+        secret: 'yyy',
         mount: {
             vod: '/vod',
             green: '/green'
+        },
+        vod: {
+            playConfig: {
+                PlayDomain: 'video.xxx.com'
+            }
         }
     };
 

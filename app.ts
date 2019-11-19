@@ -24,7 +24,7 @@ export default (app: Application) => {
 
                 ctx.body = await client.request(ctx.query.action, {
                     VideoId: ctx.query.videoId,
-                    PlayConfig: JSON.parse(decodeURIComponent(ctx.query.playConfig || '{}')) || (config.vod ? config.vod.playConfig : {}) || {},
+                    PlayConfig: ctx.query.playConfig || (config.vod ? JSON.stringify(config.vod.playConfig) : undefined),
                 })
             })
         } else {
