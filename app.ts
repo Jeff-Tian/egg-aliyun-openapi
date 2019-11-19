@@ -4,7 +4,6 @@ import RPCClient from '@alicloud/pop-core'
 const ROAClient = require('@alicloud/pop-core').ROAClient
 import uuidV1 = require('uuid/v1')
 
-// const debug = require('debug')('egg-aliyun-openapi')
 import assert = require('assert')
 
 export default (app: Application) => {
@@ -25,6 +24,7 @@ export default (app: Application) => {
 
                 ctx.body = await client.request(ctx.query.action, {
                     VideoId: ctx.query.videoId,
+                    PlayConfig: JSON.parse(decodeURIComponent(ctx.query.playConfig || '{}')) || (config.vod ? config.vod.playConfig : {}) || {},
                 })
             })
         } else {

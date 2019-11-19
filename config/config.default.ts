@@ -9,4 +9,9 @@ exports.aliyunOpenApi = {
         vod: '/aliyun-openapi/vod',
         green: '/aliyun-openapi/green',
     },
+    vod: {
+        playConfig: {
+            PlayDomain: 'xxx.yyy.com',
+        },
+    },
 }
