@@ -9,6 +9,8 @@
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Jeff-Tian_egg-aliyun-openapi)](https://sonarcloud.io/dashboard?id=Jeff-Tian_egg-aliyun-openapi)
+
 [npm-image]: https://img.shields.io/npm/v/egg-aliyun-openapi.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-aliyun-openapi
 [david-image]: https://img.shields.io/david/jeff-tian/egg-aliyun-openapi.svg?style=flat-square
@@ -85,3 +87,5 @@ npm run test-local
 ## Release Notes:
 
 - 1.0.0: proxy aliyun vod product 
+- 1.1.0: proxy ali green
+- 1.2.0: Allow pass PlayConfig to vod 
